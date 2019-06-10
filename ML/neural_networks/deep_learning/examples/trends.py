@@ -7,10 +7,8 @@ import numpy
 seed = 7
 numpy.random.seed(seed)
 
-# datasets 
+# datasets, input and output
 dset = numpy.loadtxt("trends.csv", delimiter=",")
-
-# split into input (X) and output (Y) variables
 X = dset[:,0:8]
 Y = dset[:,8]
 
