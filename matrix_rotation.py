@@ -1,9 +1,8 @@
 # Python program to rotate a matrix 
 
-# Function to rotate a matrix 
-def rotateMatrix(mat): 
+def rotateMatrix(M): 
 
-	if not len(mat): 
+	if not len(M): 
 		return
 	
 	""" 
@@ -13,18 +12,18 @@ def rotateMatrix(mat):
 		right : ending column index 
 	"""
 
-	top = 0
-	bottom = len(mat)-1
+	r_index_initial = 0
+	r_index_final = len(M)-1
 
-	left = 0
-	right = len(mat[0])-1
+	c_index_initial = 0
+	c_index_final = len(M[0])-1
 
-	while left < right and top < bottom: 
+	while c_index_initial < c_index_final and r_index_initial < r_index_final: 
 
 		# Store the first element of next row, 
 		# this element will replace first element of 
 		# current row 
-		prev = mat[top+1][left] 
+		prev = M[r_index_initial+1][c_index_initial] 
 
 		# Move elements of top row one step right 
 		for i in range(left, right+1): 
