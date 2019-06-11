@@ -59,29 +59,3 @@ def rotateMatrix(mat):
 		left += 1
 
 	return mat 
-
-# Utility Function 
-def printMatrix(mat): 
-	for row in mat: 
-		print row 
-
-
-# Test case 1 
-matrix =[ 
-			[1, 2, 3, 4 ], 
-			[5, 6, 7, 8 ], 
-			[9, 10, 11, 12 ], 
-			[13, 14, 15, 16 ] 
-		] 
-# Test case 2 
-""" 
-matrix =[ 
-			[1, 2, 3], 
-			[4, 5, 6], 
-			[7, 8, 9] 
-		] 
-"""
-
-matrix = rotateMatrix(matrix) 
-# Print modified matrix 
-printMatrix(matrix) 
